@@ -1,0 +1,125 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT License. -->
+<!-- This file shows how to design a first-run page that provides a welcome screen to the user about the features of the add-in. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contoso Task Pane Add-in</title>
+
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+
+    <!-- For more information on Fluent UI, visit https://developer.microsoft.com/fluentui#/. -->
+    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css"/>
+
+    <!-- Template styles -->
+    <link href="taskpane.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="ms-font-m ms-welcome ms-Fabric">
+    <!-- <header class="ms-welcome__header ms-bgColor-neutralLighter">
+        <img width="90" height="90" src="../../assets/logo-filled.png" alt="Contoso" title="Contoso" />
+        <h1 class="ms-font-su">Welcome</h1>
+    </header> -->
+
+    <!-- I think the sideload section is to warn when my user doesn't load the app correctly to Excel. -->
+    <section id="sideload-msg" class="ms-welcome__main">
+        <h2 class="ms-font-xl">Please <a target="_blank" href="https://learn.microsoft.com/office/dev/add-ins/testing/test-debug-office-add-ins#sideload-an-office-add-in-for-testing">sideload</a> your add-in to see app body.</h2>
+    </section>
+
+    <main id="app-body" class="ms-welcome__main" style="display: none;">
+        <!-- <button class="ms-button" id="create-table">Create Table</button><br/><br/> -->
+        <label class="searchlabels">Search Pattern:</label>
+        <input type="text" class="textentry" name="search" id="search">
+        <label class="searchlabels">Replacement Pattern:</label>
+        <input type="text" class="textentry" name="replace" id="replace">
+        <div> <input type="checkbox" id="matchText"><label>match text</label> </div>
+        <div> <input type="checkbox" id="caseSensitive"><label>case sensitive</label> </div>
+        <div> <input type="checkbox" id="useActiveSelection"><label>use active selection</label> </div>
+        <fieldset>
+            <legend>Match Mode</legend>
+            <div>
+                <input type="radio" name="matchMode" value="partial"><label>match partial</label>
+            </div>
+            <div>
+    
+                <input type="radio" name="matchMode" value="word"><label>match whole word</label>
+            </div>
+            <div>
+    
+                <input type="radio" name="matchMode" value="cell" checked><label>match whole cell</label>
+            </div>
+    
+        </fieldset>
+        <label class="searchlabels">Results</label>
+        <table class="resultstable">
+            <tr>
+                <td>Cell</td>
+                <td>Original</td>
+                <td>Replacement</td>
+            </tr>
+            <tr>
+                <td>A1</td>
+                <td>Hello</td>
+                <td>World---ssdsd</td>
+            </tr>
+            <tr>
+                <td>B2</td>
+                <td>JJJDFSDFSDFSDF</td>
+                <td>SDFSDFSDF HELLO OOOODDODDODODj</td>
+            </tr>
+            <tr>
+                <td>B2</td>
+                <td>JJJDFSDFSDFSDF</td>
+                <td>SDFSDFSDF HELLO OOOODDODDODODj</td>
+            </tr>
+            <tr>
+                <td>B2</td>
+                <td>JJJDFSDFSDFSDF</td>
+                <td>SDFSDFSDF HELLO OOOODDODDODODj</td>
+            </tr>
+            <tr>
+                <td>B2</td>
+                <td>JJJDFSDFSDFSDF</td>
+                <td>SDFSDFSDF HELLO OOOODDODDODODj</td>
+            </tr>
+            <tr>
+                <td>B2</td>
+                <td>JJJDFSDFSDFSDF</td>
+                <td>SDFSDFSDF HELLO OOOODDODDODODj</td>
+            </tr>
+            <tr>
+                <td>B2</td>
+                <td>JJJDFSDFSDFSDF</td>
+                <td>SDFSDFSDF HELLO OOOODDODDODODj</td>
+            </tr>
+            <tr>
+                <td>B2</td>
+                <td>JJJDFSDFSDFSDF</td>
+                <td>SDFSDFSDF HELLO OOOODDODDODODj</td>
+            </tr>
+            <tr>
+                <td>B2</td>
+                <td>JJJDFSDFSDFSDF</td>
+                <td>SDFSDFSDF HELLO OOOODDODDODODj</td>
+            </tr>
+            <tr>
+                <td>B2</td>
+                <td>JJJDFSDFSDFSDF</td>
+                <td>SDFSDFSDF HELLO OOOODDODDODODj</td>
+            </tr>
+            <tr>
+                <td>B2</td>
+                <td>JJJDFSDFSDFSDF</td>
+                <td>SDFSDFSDF HELLO OOOODDODDODODj</td>
+            </tr>
+
+        </table>
+    </main>
+</body>
+
+</html>
