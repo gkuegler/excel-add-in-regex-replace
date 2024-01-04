@@ -13,7 +13,7 @@
 function replaceTableData(table, data) {
   // Testing data.
   // const data = [
-  // ["A1", "existing", "replacement"],
+  // ["A1", "existing", "replacement"],m
   // ["B1", "existing", "replacement"],
   // ];
 
