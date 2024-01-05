@@ -1,6 +1,9 @@
 /**
  * API REFERENCE
  * https://learn.microsoft.com/en-us/javascript/api/excel?view=excel-js-preview
+ *
+ * DEPLOYMENT & PUBLISHING
+ * https://learn.microsoft.com/en-us/office/dev/add-ins/publish/publish
  */
 
 // TODO: enable every reporting dialogbox
